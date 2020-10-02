@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .flex-grid {
+      display: flex;
+    }
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+    }
+    .flex-row .col {
+      padding: 10px;
+    }
+    .flex-grid .container {
+      flex: 1;
+    }
+    .flex-grid-thirds {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex-grid-thirds .col-sm {
+      flex-grow: 1;
+    }
+
+    .flex-grid-thirds .col-lg {
+      flex-grow: 1;
+    }
+    @media (max-width: 400px) {
+      .flex-grid,
+      .flex-grid-thirds {
+        display: block;
+        .col {
+          width: 100%;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+    /* * {
+      box-sizing: border-box;
+    } */
+    body {
+      /* padding: 20px; */
+      margin: 0px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .flex-grid { 
+      margin: 0 0 20px 0;
+    }
+    .container {
+      /* border: 1px solid black; */
+      padding: 20px;
+    }
+    .fullHeight {
+      height: 100vh;
+    }
+
+    .scrollContainer {
+      overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .scrollContainer::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .avatar {
+      vertical-align: middle;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid black
+    }
+
+    p {
+      color: white;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="flex-row" style="margin-bottom: 0; background-color: grey">
+      <div class="col">
+        <img src="me.jpg" alt="avatar" class="avatar" />
+      </div>
+      <div class="col">
+        <p>me</p>
+      </div>
+      <div class="col">
+        <p>posts</p>
+      </div>
+    </div>
+    
+    <!-- <div class="flex-grid-thirds">
+      <div class="col col-sm fullHeight">
+        <div class="flex-grid">
+          <div class="col" style="text-align: center; padding: 0px; width: 25px; background-color: red;">
+            <h1>hey, i&rsquo;m max</h1>
+          </div>
+        </div>
+      </div> -->
+      <div class="container col-lg fullHeight scrollContainer" style="padding-top: 0;">
+        <div class="flex-grid" style="height: 75%; margin-top: 10">
+          <div class="container" style="background-color: aquamarine;"></div>
+        </div>
+        <div class="flex-grid" style="background-color: aquamarine; height: 75%">
+          <div class="container"></div>
+        </div>
+        <div class="flex-grid" style="background-color: aquamarine; height: 75%;">
+          <div class="container"></div>
+        </div>
+      </div>
+      <!-- <div class="col col-sm fullHeight"></div> -->
+    </div>
+  </body>
+</html>
